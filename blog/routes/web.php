@@ -15,5 +15,11 @@ Route::get('/','IndexController@home');
 
 Route::get('/sign-up','IndexController@sign');
 
+Auth::routes();
+
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('/sign-up', 'Auth\RegisterController@create');
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 

@@ -4,7 +4,7 @@
 	@yield('title')
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-	<link href="{{ asset('css/index.css') }}" rel="stylesheet" type="text/css" >
+	<link href="{{ asset('css/'.$useCSS.'.css')}}" rel="stylesheet" type="text/css" >
 	<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -31,9 +31,7 @@
 	</div>
 
 	<!-- 留言列表 -->
-	<div id="commend-area">
 		@yield('list')
-	</div>
 
 	<footer>
 		@yield('footer')
