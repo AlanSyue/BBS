@@ -1,0 +1,221 @@
+body {
+	width: 1024px;
+	height: 100%;
+	max-width: 1024px;
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+}
+
+header{
+
+	width: 1024px;
+	height: 100%;
+	max-width: 1024px;
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+
+}
+h1 {
+
+	font-family: 微軟正黑體;
+	margin-left: 5px;
+	width: 300px;
+	margin: 0;
+	float: left;
+}
+
+a {
+	text-decoration:none;
+}
+
+h3 {
+	margin-bottom: 10px;
+}
+
+h5 {
+	margin-bottom: 10px;
+	margin-right: 3px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+	font-family: 微軟正黑體;
+}
+
+.clear-float{
+	clear: both;
+}
+
+#sign-up-form {
+	width: 100%;
+	height: auto;
+	max-width: 1024px;
+}
+
+#fb-sign-up{
+	width: 100%;
+	height: 100%;
+	max-width: 1024px;
+}
+
+#submit {
+	float: left;
+}
+
+
+
+#re-sent {
+	height: auto;
+	margin-left: 100px;
+	padding-top: 5px;
+}
+
+
+#re-sent button{
+	color: blue;
+	cursor: pointer;
+	border: 0;
+	background-color: transparent;
+	text-decoration: underline;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+html {
+	width: 100%;
+	height: 100%;
+	/*max-width: 768px;*/
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+}
+body {
+	width: 100%;
+	height: 100%;
+/*	max-width: 768px;*/
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+}
+
+header{
+
+	width: 100%;
+	height: auto;
+
+}
+
+
+h1 {
+
+	font-family: 微軟正黑體;
+	margin-left: 5px;
+	width: 100px;
+	margin-top: 15px;
+	margin-right: 15px;
+	float: left;
+	font-size: 18px;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+	font-family: 微軟正黑體;
+}
+
+.clear-float{
+	clear: both;
+}
+
+h3 {
+	margin-bottom: 10px;
+}
+
+h5 {
+	margin-bottom: 10px;
+	margin-right: 3px;
+}
+
+#sign-up-form {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	float: left;
+}
+
+#fb-sign-up{
+	width: 100%;
+	height: 100%;
+	max-width: 1024px;
+}
+
+
+
+#re-sent {
+	height: auto;
+	margin: 0;
+	margin-left: 30px;
+	padding-top: 5px;
+	display: inline-block;
+	float: left;
+}
+
+
+#re-sent button{
+	color: blue;
+	cursor: pointer;
+	border: 0;
+	background-color: transparent;
+	text-decoration: underline;
+
+}
+
+}
