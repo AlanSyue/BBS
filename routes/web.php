@@ -17,9 +17,12 @@ Route::get('/sign-up','IndexController@sign')->name('register');
 
 Route::get('/login','IndexController@login')->name('login');
 
-Route::get('/forget-passwords', 'forgotPasswordController@showLinkRequestForm');
+// Route::get('/ask', 'Askcontroller');
+
+Route::get('/forget-passwords', 'Auth\forgotPasswordController@showLinkRequestForm')->name('password.reset');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 
 Route::post('/sign-up', 'Auth\RegisterController@register');
 

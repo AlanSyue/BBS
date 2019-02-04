@@ -36,7 +36,7 @@
  		</div>
  		</form>
  		<div id="re-sent">
- 		<button  onclick="window.open('forget-passwords.php')">
+ 		<button  onclick="window.open('forget-passwords')">
  			忘記密碼？
  		</button>
  		</div>
