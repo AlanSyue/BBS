@@ -13,6 +13,12 @@
  		<table id="commend-form">
  			<tr>
  				<td>
+ 					暱稱
+ 				</td>
+ 				<td>
+ 					<input type="text" name="name" value="{{ old('name') }}">
+ 				</td>
+ 				<td>
  					常用信箱
  				</td>
  				<td>
@@ -41,15 +47,24 @@
 	</table>
 	<div id="submit">
 	<input type="submit" name="submit" id="submit-btn">
+
 	</div>
+
 	</form>
 	<div id="re-sent">
 	<button  onclick="window.open('resent-verify-email.php')">
-		重發驗證信
 	</button>
 </div>
 
 </div>
+
+@if (count($errors) > 0)
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li style="color: red;font-weight: bold;">{{ $error }}</li>
+            @endforeach
+        </ul>
+@endif
 
 <hr>
 

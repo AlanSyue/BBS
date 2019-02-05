@@ -15,7 +15,7 @@
 
 			<div id='post-categories'>
 				<span>{{$new->type}}  </span>
-				<span>{{$new->user->email}} </span>
+				<span>{{$new->user->name}} </span>
 			</div>
 
 			<div id='post-content'>

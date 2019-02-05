@@ -1,0 +1,161 @@
+html {
+	width: 1024px;
+	height: 100%;
+	max-width: 1024px;
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+}
+body {
+	width: 1024px;
+	height: 100%;
+	max-width: 1024px;
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+}
+
+header{
+
+	width: 100%;
+	height: auto;
+	max-width: 1024px;
+
+}
+
+content{
+	width: 100%;
+	height: auto;
+	max-width: 1024px;
+}
+h1 {
+
+	font-family: 微軟正黑體;
+	margin-left: 5px;
+	width: 300px;
+	margin: 0;
+	float: left;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+	font-family: 微軟正黑體;
+}
+
+.clear-float{
+	clear: both;
+}
+
+#my_info button{
+	color: blue;
+	cursor: pointer;
+	border: 0;
+	background-color: transparent;
+	text-decoration: underline;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+html {
+	width: 100%;
+	height: 100%;
+	/*max-width: 768px;*/
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+}
+body {
+	width: 100%;
+	height: 100%;
+/*	max-width: 768px;*/
+	font-family: 微軟正黑體;
+	margin: 0 auto;
+}
+
+header{
+
+	width: 100%;
+	height: auto;
+
+}
+
+
+h1 {
+
+	font-family: 微軟正黑體;
+	margin-left: 5px;
+	width: 50px;
+	margin-top: 15px;
+	margin-right: 5px;
+	float: left;
+	font-size: 18px;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+	font-family: 微軟正黑體;
+}
+
+.clear-float{
+	clear: both;
+}
+
+#my_info {
+	width: 100%;
+	height: auto;
+	margin: 30px;
+}
+
+}

@@ -50,6 +50,19 @@ class IndexController extends Controller
 		]);
 	}
 
+	public function member()
+	{
+		$users = \App\User::all();
+	
+		return view('member-index',compact('users'),[
+			'useCSS' =>'member-index',
+			'h2Title' =>'登入會員',
+			'classHome' =>'none',
+			'classReg' =>'active',
+			'classLog' =>'none'
+		]);
+	}
+
 
 
 }

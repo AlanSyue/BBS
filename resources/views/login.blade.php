@@ -43,6 +43,14 @@
 
  </div>
 
+ @if (count($errors) > 0)
+         <ul>
+             @foreach ($errors->all() as $error)
+                 <li style="color: red;font-weight: bold;">{{ $error }}</li>
+             @endforeach
+         </ul>
+ @endif
+
 <hr>
 
  <div id="fb-sign-up">

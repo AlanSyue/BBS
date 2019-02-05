@@ -19,7 +19,7 @@
 	    	    <a class={{$classReg}} href='/sign-up'>註冊</a>
 		    @else
 		    	<a class={{$classLog}} href="{{ route('logout') }}">登出</a>
-		        <a class={{$classReg}} href='#'> {{ Auth::user()->email }}</a>
+		        <a class={{$classReg}} href='member-index'> <!-- {{ Auth::user()->name }}  -->會員中心</a>
 	    	     
 		    @endif
 		    <a class={{$classHome}} href='/'>首頁</a>

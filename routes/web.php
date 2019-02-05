@@ -23,8 +23,6 @@ Route::get('/login','IndexController@login')->name('login');
 
 Route::post('/login', 'Auth\LoginController@login');
 
-// Route::get('/ask', 'Askcontroller');
-
 // 忘記密碼,寄信
 Route::get('/forget-passwords', 'Auth\forgotPasswordController@showLinkRequestForm')->name('password.forget');
 
@@ -40,9 +38,11 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
 
+// 發文
+// Route::get('/ask', 'Askcontroller');
 
-
-
+// 會員中心
+Route::get('/member-index', 'IndexController@member');
 
 
 
