@@ -13,24 +13,41 @@
 
 Route::get('/','IndexController@home')->name('index');
 
+// 註冊功能
 Route::get('/sign-up','IndexController@sign')->name('register');
-
-Route::get('/login','IndexController@login')->name('login');
-
-// Route::get('/ask', 'Askcontroller');
-
-Route::get('/forget-passwords', 'Auth\forgotPasswordController@showLinkRequestForm')->name('password.reset');
-
-Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
 
 Route::post('/sign-up', 'Auth\RegisterController@register');
 
+// 登入功能
+Route::get('/login','IndexController@login')->name('login');
+
 Route::post('/login', 'Auth\LoginController@login');
+
+// Route::get('/ask', 'Askcontroller');
+
+// 忘記密碼,寄信
+Route::get('/forget-passwords', 'Auth\forgotPasswordController@showLinkRequestForm')->name('password.forget');
 
 Route::post('/forget-passwords', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
+// 修改密碼
+Route::get('/reset-passwords/{token}/{email}', 'Auth\ResetPasswordController@showResetForm')->name('password.request');
+
+Route::post('/reset-passwords/{token}/{email}', 'Auth\ResetPasswordController@reset');
+
+// 登出
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
+
+
+
+
+
+
+
+
+
 
 
 
