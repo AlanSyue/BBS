@@ -4,7 +4,13 @@
 @endsection
 
 @section('right-zone')
-	<button id="wantAsk"><a href="#">我要發文</a></button>
+	@if(Auth::check())
+		<button id="wantAsk"><a href="ask">我要發文</a></button>
+
+	@else
+		<button id="wantAsk"><a href="login">我要發文</a></button>
+	@endif
+
 @endsection
 
 @section('list')
@@ -14,7 +20,9 @@
 		<a href='#'>
 
 			<div id='post-categories'>
-				<span>{{$new->type}}  </span>
+				<span>
+					{{$typearry[$new->type]}} |
+				</span>
 				<span>{{$new->user->name}} </span>
 			</div>
 
@@ -29,7 +37,11 @@
 
 @section('footer')
 	<span class="PageText">第1頁</span>
-	<button class='next'>下一頁>></button>
+	@if($count<=2)
 
+
+	@else
+	<button class='next' onclick="javascript:location.href='/?page={{$page}}'">下一頁>></button>
+	@endif
 
 @endsection

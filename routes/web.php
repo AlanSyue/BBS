@@ -39,7 +39,9 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
 
 // 發文
-// Route::get('/ask', 'Askcontroller');
+Route::get('/ask', 'IndexController@ask');
+
+Route::post('/ask', 'IndexController@askpost');
 
 // 會員中心
 Route::get('/member-index', 'IndexController@member');
