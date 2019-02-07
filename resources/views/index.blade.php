@@ -17,7 +17,7 @@
 @foreach($news->reverse() as $new)
 	<div id='post-zone'>
 
-		<a href='#'>
+		<a href='/post/{{$new->id}}'>
 
 			<div id='post-categories'>
 				<span>

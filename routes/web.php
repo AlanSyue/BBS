@@ -46,8 +46,11 @@ Route::post('/ask', 'IndexController@askpost');
 // 會員中心
 Route::get('/member-index', 'IndexController@member');
 
+// 文章內頁
 
+Route::get('/post/{pid}', 'IndexController@postID');
 
+Route::post('/post/{pid}', 'IndexController@reply');
 
 
 

@@ -13,7 +13,7 @@
 <!-- 		<img src="{{asset('resources/assets/img/test.jpg')}}"> -->
 		<p>暱稱：{{Auth::user()->name}}</p> 
 <!-- 		<p>服務領域：</p> -->	
-		 <p>發文數：?</p>
+		 <p>發文數：{{$news}}</p>
 		 <button  onclick="window.open('reset-passwords/{{Auth::user()->name}}/{{Auth::user()->email}}')">
 		 	修改密碼
 		 </button>

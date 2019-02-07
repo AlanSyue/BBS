@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Auth;
 
 class IndexController extends Controller
 {
+
+
 
 	// 首頁
 	public function home(Request $request)
@@ -58,9 +60,10 @@ class IndexController extends Controller
 	// 會員中心
 	public function member()
 	{
+		$userID = Auth::id();
 		$users = \App\User::all();
-	
-		return view('member-index',compact('users'),[
+		$news = \App\News::where('user_id', $userID)->count();
+		return view('member-index',compact('users','news'),[
 			'useCSS' =>'member-index',
 			'h2Title' =>'登入會員',
 			'classHome' =>'none',
@@ -96,6 +99,34 @@ class IndexController extends Controller
 		]);
 
 		return redirect()->route('index');
+	
+	}
+
+	public function postID(Request $request, $pid = null)
+	{
+		$typearry = ['1'=>'心情','2'=>'分享','3'=>'提問'];
+		$users = \App\User::all();
+		$news = \App\News::where('id', $pid)->first();
+		$replys = \App\reply::where('news_id', $pid)->get();
+		return view('post',compact('users','news','typearry','replys'),[
+			'useCSS' =>'post',
+			'h2Title' =>'文章內頁',
+			'classHome' =>'none',
+			'classReg' =>'none',
+			'classLog' =>'none'
+		]);
+	
+	}
+
+	public function reply(Request $request, $pid = null)
+	{
+		$data = $request;
+
+		\App\reply::create([
+			'news_id' => $data['news_id'],
+			'content' => $data['content'],
+		]);
+		return redirect()->back();
 	
 	}
 
