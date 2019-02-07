@@ -152,6 +152,13 @@ color:gray;
 
 }
 
+.nextHide {
+	float: right;
+	margin-right: 350px;
+	visibility:hidden;
+
+}
+
 @media only screen and (max-width: 768px) {
 
 html {
@@ -318,6 +325,13 @@ text-overflow: ellipsis;
 .next {
 	float: right;
 	margin-right: 30px;
+
+}
+
+.nextHide {
+	float: right;
+	margin-right: 30px;
+	visibility:hidden;
 
 }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use DB;
 
 class IndexController extends Controller
 {
@@ -11,14 +12,45 @@ class IndexController extends Controller
 
 
 	// 首頁
-	public function home(Request $request)
+	public function home(Request $request,$page=null)
 	{
-		$news = \App\News::all()->take(2);
+		// 每頁顯示文章數
+		$selectPost = 3;
+		// 當前頁數
+		$data = $request['page'];
+		// 若 page = null, 設定為第一頁
+		if ($data==null) {
+			$data =1;
+		}
+		else {
+			$data = $request['page'];
+		}
+		// 當前第一篇文章 id
+		$start = ($selectPost*$data)-($selectPost-1);
+		// 下一頁按鈕頁數
+		$next = $data +1;
+		// 上一頁按鈕頁數
+		$previous = $data-1;
+
+		// 篩選每頁文章邏輯
+		$news = \App\News::where('id','>=', $start)->take($selectPost)->get();
+		// 文章總數
 		$count = \App\News::all()->count();
+		// 下一頁按鈕出現判斷
+		$countremainder = $count%$selectPost;
+		
+
+		if ($countremainder==0) {
+			$nextBtnCount = $count/$selectPost;
+		}
+		else{
+			$nextBtnCount = intval($count/$selectPost)+1;	
+		}
+		
 		$typearry = ['1'=>'心情','2'=>'分享','3'=>'提問'];
 
-		return view('index',compact('news','typearry','count'),[
-			'page'=>request('page'),
+		return view('index',compact('news','typearry','count','data','nextBtnCount','previous'),[
+			'page'=>$next,
 			'useCSS' =>'index',
 			'h2Title' =>'最新文章',
 			'classHome' =>'active',

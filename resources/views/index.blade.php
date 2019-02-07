@@ -36,12 +36,21 @@
 @endsection
 
 @section('footer')
-	<span class="PageText">第1頁</span>
-	@if($count<=2)
+	<span>共 {{$count}} 篇文章</span>
+	<span class="PageText">
+	第{{$data}}頁</span>
 
+
+	@if($data==$nextBtnCount )
+	<button class='nextHide'></button>
 
 	@else
 	<button class='next' onclick="javascript:location.href='/?page={{$page}}'">下一頁>></button>
 	@endif
 
+	@if($data>1)
+		<button class='next' onclick="javascript:location.href='/?page={{$previous}}'">上一頁<<</button>
+	@else
+	
+	@endif
 @endsection
